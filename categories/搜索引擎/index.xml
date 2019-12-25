@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>搜索引擎 on Baraka的博客</title>
+    <link>https://baraka-sdw.github.io/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/</link>
+    <description>Recent content in 搜索引擎 on Baraka的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn&#39;</language>
+    <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
+    <lastBuildDate>Tue, 03 Apr 2018 17:20:11 +0000</lastBuildDate>
+    
+	<atom:link href="https://baraka-sdw.github.io/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>用好搜索引擎，学习事半功倍</title>
+      <link>https://baraka-sdw.github.io/posts/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Tue, 03 Apr 2018 17:20:11 +0000</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%91%BD%E4%BB%A4/</guid>
+      <description>精确搜索符 引号：&amp;rdquo;&amp;rdquo; 用于强调内容的连续性和完整性。
+单书名号：&amp;lt;&amp;gt; 用法及功能同引号
+通配符 星号：* 用于代指未知内容。 例： 题目：两个( )鸣翠柳，一行白( )上青天。 搜索内容：两个鸣翠柳，一行上青天。 这句话翻译成人话就是：两个什么鸣翠柳，一行什么上青天。 *可以代指多个未知字符。 如图：
+  不过好像还不够准确
+问号：? 用于代指未知内容。 例： 题目：两个( )鸣翠柳，一行白( )上青天。 搜索内容：两个??鸣翠柳，一行??上青天。 这句话翻译成人话就是：两个什么鸣翠柳，一行什么上青天。 ?只能代指一个未知字符。 如图：
+  问好比星号靠谱多了。
+括号：() 用于强调内容是一个整体，无实际意义。
+###排除符和包含符：- 用于表示搜索的结果必须排除包含这些内容的项目。 例： 题目：我们需要搜索iPhone，但是不要6。 搜索内容：iPhone -(6) 如图：
+  注意：减号前面的空格一定要有！！！！！！！！！排除的内容一定要加括号！！！！！！！！加号：+ 用于表示搜索的结果必须含有包含这些内容的项目。 例：搜索：iPhone +(X) +(8s) 如图：
+  简易语句 在标题语句：intitle: 用于只搜索在标题中含有关键词的结果 例：要搜以国别数据为标题的结果。 搜索内容：intitle:头号玩家 如图：
+  在链接语句：inurl: 用于只搜索在链接中含有关键词的结果 例：搜索.net 架构的网站 搜索内容：inurl:asp?id= 如图：
+  站内搜索语句：site: 用于只在一个网站内部搜索 例：查找找C语言教程 搜索内容：C语言教程 site:cnhonkerarmy.</description>
+    </item>
+    
+  </channel>
+</rss>

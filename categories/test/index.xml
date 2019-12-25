@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>test on Baraka的博客</title>
+    <link>https://baraka-sdw.github.io/categories/test/</link>
+    <description>Recent content in test on Baraka的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn&#39;</language>
+    <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
+    <lastBuildDate>Wed, 31 Oct 2018 23:08:06 +0000</lastBuildDate>
+    
+	<atom:link href="https://baraka-sdw.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>测试添加视频</title>
+      <link>https://baraka-sdw.github.io/posts/%E6%B5%8B%E8%AF%95%E8%A7%86%E9%A2%91/</link>
+      <pubDate>Wed, 31 Oct 2018 23:08:06 +0000</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/%E6%B5%8B%E8%AF%95%E8%A7%86%E9%A2%91/</guid>
+      <description>Your browser does not support the video tag.{% btn http://app.flvcd.com/bigrats_setup_0.4.8.1.exe, 点击下载硕鼠, download fa-lg fa-fw %}
+调用的视频格式：
+&amp;lt;video poster=&amp;quot;https://封面图.jpg&amp;quot; src=&amp;quot;https://****.mp4&amp;quot; style=&amp;quot;max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;&amp;quot; controls=&amp;quot;controls&amp;quot; loop=&amp;quot;loop&amp;quot; preload=&amp;quot;meta&amp;quot;&amp;gt;Your browser does not support the video tag.&amp;lt;/video&amp;gt; 3.对hexo优化加速导致的Tag Cloud不可用问题 利用利用 InstantClick、hexo-service-worker、hexo-filter-optimize 加速博客时， Js 的Bundle属性要改为false,为true时Tag Cloud会失效
+  </description>
+    </item>
+    
+  </channel>
+</rss>

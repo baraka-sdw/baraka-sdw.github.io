@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Baraka的博客</title>
+    <link>https://baraka-sdw.github.io/posts/</link>
+    <description>Recent content in Posts on Baraka的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn&#39;</language>
+    <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
+    <lastBuildDate>Wed, 25 Dec 2019 08:54:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://baraka-sdw.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>什么是多租户？</title>
+      <link>https://baraka-sdw.github.io/posts/%E4%BB%80%E4%B9%88%E6%98%AF%E5%A4%9A%E7%A7%9F%E6%88%B7/</link>
+      <pubDate>Wed, 25 Dec 2019 08:54:41 +0800</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/%E4%BB%80%E4%B9%88%E6%98%AF%E5%A4%9A%E7%A7%9F%E6%88%B7/</guid>
+      <description>多租户技术（英语：multi-tenancy technology）或称多重租赁技术，是一种软件架构技术，它是在探讨与实现如何于多用户的环境下共享相同的系统或程序组件，并且仍可确保各用户间数据的隔离性。
+由于云计算议题的发烧，在共享的数据中心内如何以单一系统架构与服务提供多数客户端相同甚至可定制的服务，并且仍然可以保障客户的数据隔离，让多租户技术成为云计算技术下的显学。
+历史 多租户技术源于1960年代，许多公司为了要使用更多的运算资源，向持有大型主机（Mainframe）的供应商租用一部分的运算资源，而这些用户经常会用到相同的应用程序，当时会以用户在登录系统时输入的数据来决定用户的账户ID，基于这个ID，Mainframe的供应商即可利用此ID来计算运算的资源使用量，包含CPU，存储器与磁盘或磁带等，这个作法也被SAP公司用在其R/1到R/3的产品线。
+到了1990年代，应用程序服务提供者服务（application service provider）模式出现，它的作法与运作模式与租用大型主机时相同，不过租用的资源是在软件上，除了操作系统以外也包含了其上的应用程序，例如ERP系统或是CRM等应用，系统可能会运行在数台不同的机器上，或是在相同的主机但共享不同的数据库，以区分并计算客户的资源使用量，藉以作为计费的标准，而此技术也有效的缩减供应商的实体机器成本（因为可以在一台电脑上同时运行多个用户所租用的应用程序行程）。到了现代，受欢迎的消费者导向Web应用程序（如Hotmail或Gmail等）也是以单一应用程序平台来支持所有的用户，这已经是多租户技术的自然演化的结果，多租户技术也可以让客户中的一部分用户得以进一步定制他们的应用程序。
+在虚拟化（virtualization）技术的成熟与应用性的扩张之下，多租户技术可以驾驭虚拟化的平台，更强化在用户应用程序与数据之间的隔离，让多租户技术能更加发挥它的特色。
+概念和技术 在多租户技术中，租户（tenant）是指使用系统或电脑运算资源的客户，但在多租户技术中，租户包含在系统中可识别为指定用户的一切数据，举凡账户与统计信息（accounting data），用户在系统中建置的各式数据，以及用户本身的客制化应用程序环境等，都属于租户的范围，而租户所使用的则是基于供应商所开发或建置的应用系统或运算资源等，供应商所设计的应用系统会容纳数个以上的用户在同一个环境下使用，为了要让多个用户的环境能力同一个应用程序与运算环境上使用，则应用程序与运算环境必须要特别设计，除了可以让系统平台可以允许同时让多份相同的应用程序运行外，保护租户数据的隐私与安全也是多租户技术的关键之一。
+技术上，多租户技术可以透过许多不同的方式来切割用户的应用程序环境或数据。
+ 数据面（data approach）：供应商可以利用切割数据库（database），切割存储区（storage），切割结构描述（schema）或是表格（table）来隔离租户的数据，必要时会需要进行对称或非对称加密以保护敏感数据，但不同的隔离作法有不同的实现复杂度与风险。 程序面（application approach）：供应商可以利用应用程序挂载（hosting）环境，于行程（process）上切割不同租户的应用程序运行环境，在无法跨越行程通信的情况下，保护各租户的应用程序运行环境，但供应商的运算环境要够强。 系统面（system approach）：供应商可以利用虚拟化技术，将实体运算单元切割成不同的虚拟机，各租户可以使用其中一至数台的虚拟机来作为应用程序与数据的保存环境，但对供应商的运算能力要更要求。  实现方式 多租户技术的实现重点，在于不同租户间应用程序环境的隔离（application context isolation）以及数据的隔离（data isolation），以维持不同租户间应用程序不会相互干扰，同时数据的保密性也够强。
+应用程序部分：透过行程或是支持多应用程序同时运行的装载环境（例如Web Server，像是Apache或IIS等）来做行程间的隔离，或是在同一个伺服程序（server）行程内以线程的方式隔离。 数据部分：透过不同的机制将不同租户的数据隔离，Force.com是采用中介数据（metadata）的技术来切割，微软 MSDN 的技术文件则是展示了使用结构描述的方式隔离。
+特色 多租户技术有下列特色：
+ 由于多租户技术可以让多个租户共享一个应用程序或运算环境，且租户大多不会使用太多运算资源的情况下，对供应商来说多租户技术可以有效的降低环境建置的成本。包含硬件本身的成本，操作系统与相关软件的授权成本都可以因为多租户技术，而由多个租户一起分担。 透过不同的数据管理手段，多租户技术的数据可以用不同的方式进行数据隔离，在供应商的架构设计下，数据的隔离方式也会不同，而良好的数据隔离法可以降低供应商的维护成本（包含设备与人力），而供应商可以在合理的授权范围内取用这些数据分析，以作为改善服务的依据。 多租户架构下所有用户都共享相同的软件环境，因此在软件改版时可以只发布一次，就能在所有租户的环境上生效。 具多租户架构的应用软件虽可客制，但客制难度较高，通常需要平台层的支持与工具的支持，才可降低客制化的复杂度。  应用 多租户技术在实务上运用的成功且广为人知的案例之一，是由Salesforce.com所建置的CRM应用系统，该公司除了Salesforce.com的CRM软件以外，它还建置了Force.com平台即服务（PaaS）架构，以支持开发人员发展基于Force.com平台上的应用程序。
+在云计算的加持之下，多租户技术被广为运用于开发云端各式服务，不论是IaaS，PaaS还是SaaS，都可以看到多租户技术的影子。</description>
+    </item>
+    
+    <item>
+      <title>Mysql笔记</title>
+      <link>https://baraka-sdw.github.io/posts/mysql%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 20 Nov 2019 14:06:00 +0800</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/mysql%E7%AC%94%E8%AE%B0/</guid>
+      <description>Windows服务 -- 启动MySQL net start mysql -- 创建Windows服务 sc create mysql binPath= mysqld_bin_path(注意：等号与值之间有空格) 连接与断开服务器 mysql -h 地址 -P 端口 -u 用户名 -p 密码 SHOW PROCESSLIST -- 显示哪些线程正在运行 SHOW VARIABLES -- 显示系统变量信息 数据库操作 -- 查看当前数据库 SELECT DATABASE(); -- 显示当前时间、用户名、数据库版本 SELECT now(), user(), version(); -- 创建库 CREATE DATABASE[ IF NOT EXISTS] 数据库名 数据库选项 数据库选项： CHARACTER SET charset_name COLLATE collation_name -- 查看已有库 SHOW DATABASES[ LIKE &#39;PATTERN&#39;] -- 查看当前库信息 SHOW CREATE DATABASE 数据库名 -- 修改库的选项信息 ALTER DATABASE 库名 选项信息 -- 删除库 DROP DATABASE[ IF EXISTS] 数据库名 同时删除该数据库相关的目录及其目录内容 表的操作 -- 创建表 CREATE [TEMPORARY] TABLE[ IF NOT EXISTS] [库名.</description>
+    </item>
+    
+    <item>
+      <title>什么是句柄？</title>
+      <link>https://baraka-sdw.github.io/posts/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%A5%E6%9F%84/</link>
+      <pubDate>Mon, 18 Nov 2019 17:35:54 +0800</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%A5%E6%9F%84/</guid>
+      <description>从广义上，能够从一个数值拎起一大堆数据的东西都可以叫做句柄。句柄的英文是&amp;quot;Handle&amp;rdquo;，本义就是&amp;quot;柄&amp;rdquo;，只是在计算机科学中，被特别地翻译成&amp;quot;句柄&amp;rdquo;，其实还是个&amp;quot;柄&amp;rdquo;。从一个小东西拎起一大堆东西，这难道不像是个&amp;quot;柄&amp;quot;吗？
+然后，指针其实也是一种&amp;quot;句柄&amp;rdquo;，只是由于指针同时拥有更特殊的含义——实实在在地对应内存里地一个地址——所以，通常不把指针说成是&amp;quot;句柄&amp;rdquo;。但指针也有着能从一个32位的值引用到一大堆数据的作用，这不是句柄又是什么？
+Windows系统中有许多内核对象（这里的对象不完全等价于&amp;quot;面向对象程序设计&amp;quot;一词中的&amp;quot;对象&amp;rdquo;，虽然实质上还真差不多），比如打开的文件，创建的线程，程序的窗口，等等。这些重要的对象肯定不是4个字节或者8个字节足以完全描述的，他们拥有大量的属性。为了保存这样一个&amp;quot;对象&amp;quot;的状态，往往需要上百甚至上千字节的内存空间，那么怎么在程序间或程序内部的子过程（函数）之间传递这些数据呢？拖着这成百上千的字节拷贝来拷贝去吗？显然会浪费效率。那么怎么办？当然传递这些对象的首地址是一个办法，但这至少有两个缺点：
+暴露了内核对象本身，使得程序（而不是操作系统内核）也可以任意地修改对象地内部状态（首地址都知道了，还有什么不能改的？），这显然是操作系统内核所不允许的； 操作系统有定期整理内存的责任，如果一些内存整理过一次后，对象被搬走了怎么办？ 所以，Windows操作系统就采用进一步的间接：在进程的地址空间中设一张表，表里头专门保存一些编号和由这个编号对应一个地址，而由那个地址去引用实际的对象，这个编号跟那个地址在数值上没有任何规律性的联系，纯粹是个映射而已。
+在Windows系统中，这个编号就叫做&amp;quot;句柄&amp;rdquo;。Handle在Windows中的含义很广泛，以下关于谈到的Handle除非特别说明，将仅限于进程、线程的上下文中。
+1、先来谈谈Handle Handle本身是一个32位的无符号整数，它用来代表一个内核对象。它并不指向实际的内核对象，用户模式下的程序永远不可能获得一个内核对象的实际地址（一般情况下）。那么Handle的意义何在？它实际上是作为一个索引在一个表中查找对应的内核对象的实际地址。那么这个表在哪里呢？每个进程都有这样的一个表，叫句柄表。该表的第一项就是进程自己的句柄，这也是为什么你调用GetCurrentProcess()总是返回0x7FFFFFFF原因。
+简单地说，Handle就是一种用来&amp;quot;间接&amp;quot;代表一个内核对象的整数值。你可以在程序中使用handle来代表你想要操作的内核对象。这里的内核对象包括：事件（Event）、线程、进程、Mutex等等。我们最常见的就是文件句柄（file handle）。
+另外要注意的是，Handle仅在其所属的进程中才有意义。将一个进程拥有的handle传给另一个进程没有任何意义，如果非要这么做，则需要使用DuplicateHandle()，在多个进程间传递Handle是另外一个话题了，与这里要讨论的无关。
+2、进程ID 首先，进程ID是一个32位无符号整数，每个进程都有这样的一个ID，并且该ID在系统范围内是唯一的。系统使用该ID来唯一确定一个进程。
+深入些说，系统可能使用进程ID来计算代表该进程的内核对象的基地址（及EPROCESS结构的基地址），具体的计算公式你可以去问微软的OS开发人员。
+3、HINSTANCE HINSTANCE也是一个32无符号整数，它表示程序加载到内存中的基地址。</description>
+    </item>
+    
+    <item>
+      <title>HTTP/1.1与HTTP/2有什么区别？</title>
+      <link>https://baraka-sdw.github.io/posts/http1%E4%B8%8Ehttp2%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Wed, 16 Oct 2019 08:41:45 +0800</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/http1%E4%B8%8Ehttp2%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</guid>
+      <description>介绍 超文本传输​​协议（HTTP）是一种应用协议，自1989年发明以来，它一直是事实上在万维网上进行通信的标准。从1997年发布HTTP/1.1到最近，对它的修改很少。协议。但是在2015年，重新构想的版本称为HTTP/2投入使用，它提供了几种减少延迟的方法，尤其是在处理移动平台以及服务器密集型图形和视频时。此后HTTP/2变得越来越流行，据估计，世界上约有三分之一的网站都支持HTTP/2。在这种瞬息万变的格局中，Web开发人员可以从了解HTTP/1.1和HTTP/2之间的技术差异中受益，从而使他们可以就不断发展的最佳实践做出明智而有效的决策。
+阅读本文之后，您将了解HTTP/1.1和HTTP/2之间的主要区别，重点介绍HTTP/2为实现更有效的Web协议而采取的技术更改。
+背景 为了具体说明HTTP/2对HTTP/1.1所做的特定更改，让我们首先从较高的角度看一下它们的历史发展和基本工作。
+HTTP/1.1 HTTP由Timothy Berners-Lee于1989年开发，作为万维网的通信标准，HTTP是一种顶级应用程序协议，它在客户端计算机与本地或远程Web服务器之间交换信息。在此过程中，客户端通过调用类似或的方法向服务器发送基于文本的请求。作为响应，服务器将HTML页面之类的资源发送回客户端。GETPOST
+例如，假设您正在访问域中的网站www.example.com。当您导航到该URL时，计算机上的Web浏览器会以基于文本的消息的形式发送HTTP请求，类似于以下所示：
+GET /index.html HTTP/1.1 Host: www.example.com 该请求使用的GET方法，该方法从后面列出的主机服务器中请求数据Host:。响应此请求，example.comWeb服务器将HTML页面返回到发出请求的客户端，此外还包含HTML中要求的任何图像，样式表或其他资源。请注意，在第一次数据调用中，并非所有资源都会返回给客户端。请求和响应将在服务器和客户端之间来回移动，直到Web浏览器收到在屏幕上呈现HTML页面内容所需的所有资源为止。
+您可以将这种请求和响应的交换视为Internet协议栈的单个应用程序层，它位于传输层（通常使用传输控制协议或TCP）和网络层（使用Internet协议或IP ）之上）： 关于此堆栈的较低层，有很多要讨论的内容，但是为了获得对HTTP/2的高层了解，您只需要知道此抽象层模型以及HTTP进入其中的位置即可。
+借助HTTP/1.1的基本概述，我们现在可以继续讲述HTTP/2的早期开发。
+HTTP/2 HTTP/2最初是SPDY协议，最初由Google开发，旨在通过使用压缩，复用和优先级等技术来减少网页加载延迟。当IETF（互联网工程任务组）的超文本传输​​协议工作组httpbis 将该标准放在一起时，此协议充当HTTP/2的模板，并最终在2015年5月发布了HTTP/2。从一开始，许多浏览器支持这项标准化工作，包括Chrome，Opera，Internet Explorer和Safari。自2015年以来，部分原因是由于该浏览器的支持，该协议的采用率非常高，新站点中的采用率尤其高。
+从技术角度来看，区别HTTP/1.1和HTTP/2的最重要功能之一是二进制框架层，可以将其视为Internet协议栈中应用程序层的一部分。与HTTP/1.1（以纯文本格式保留所有请求和响应）相反，HTTP/2使用二进制框架层以二进制格式封装所有消息，同时仍保持HTTP语义，例如动词，方法和标头。应用程序级API仍将以传统的HTTP格式创建消息，但是基础层随后会将这些消息转换为二进制。这样可以确保在与新协议进行交互时，在HTTP/2之前创建的Web应用程序可以继续正常运行。
+将消息转换为二进制，HTTP/2可以尝试HTTP/1.1中没有的新的数据传输方法，这是两种协议之间实际差异的根本原因。下一节将介绍HTTP/1.1的交付模型，然后介绍HTTP/2带来了哪些新模型。
+投放模式 如上一节所述，HTTP/1.1和HTTP/2共享语义，使用熟悉的方法（如GET和），确保在两种协议之间在服务器和客户端之间传输的请求和响应作为具有标题和正文的传统格式的消息到达目的地POST。但是，尽管HTTP/1.1以纯文本消息形式传输这些消息，但HTTP/2却将它们编码为二进制，从而提供了截然不同的传递模型可能性。在本节中，我们将首先简要研究HTTP/1.1如何通过其交付模型来尝试优化效率以及由此产生的问题，然后是HTTP/2二进制框架层的优势以及如何确定优先级的描述。要求。
+HTTP/1.1 —流水线和行头阻塞 客户端在HTTP GET请求上收到的第一个响应通常不是完全呈现的页面。相反，它包含指向所请求页面所需的其他资源的链接。客户端发现只有在下载页面后，页面的完整呈现才需要服务器提供这些额外资源。因此，客户端将不得不提出其他请求来检索这些资源。在HTTP/1.0中，客户端必须中断并重新建立与每个新请求的TCP连接，这在时间和资源上都是一项昂贵的事务。
+HTTP/1.1通过引入持久连接和流水线处理了这个问题。对于持久连接，HTTP/1.1假定TCP连接应该保持打开状态，除非直接告知要关闭。这允许客户端通过同一连接发送多个请求，而不必等待每个请求的响应，从而大大提高了HTTP/1.1相对于HTTP/1.0的性能。
+不幸的是，这种优化策略存在一个自然的瓶颈。由于多个数据包在到达同一目的地时无法相互传递，因此在某些情况下，队列开头的无法检索其所需资源的请求将阻止其后的所有请求。这被称为行头（HOL）阻止，并且在优化HTTP/1.1中的连接效率方面是一个重大问题。添加单独的并行TCP连接可以缓解此问题，但是客户端和服务器之间可能存在的并发TCP连接的数量受到限制，并且每个新连接都需要大量资源。
+这些问题在HTTP/2开发人员的思想中居首位，他们提议使用上述二进制框架层来解决这些问题，您将在下一节中详细了解该主题。
+HTTP/2 —二进制框架层的优点 在HTTP/2中，二进制帧层对请求/响应进行编码，并将其切成较小的信息包，从而大大提高了数据传输的灵活性。
+让我们仔细看看它是如何工作的。与HTTP/1.1（必须使用多个TCP连接来减轻HOL阻塞的影响）相反，HTTP/2在两台计算机之间建立了一个连接对象。在此连接内，有多个数据流。每个流由熟悉的请求/响应格式的多个消息组成。最后，每条消息都分成较小的单元，称为框架：
+从最细粒度的角度讲，通信通道由一堆二进制编码的帧组成，每个帧都标记到特定的流。识别标签允许连接在传输过程中交织这些帧，并在另一端重新组装它们。交错的请求和响应可以并行运行，而不会阻塞后面的消息，这一过程称为multiplexing。通过确保没有消息等待其他消息完成，多路复用解决了HTTP/1.1中的行头阻塞问题。这也意味着服务器和客户端可以发送并发请求和响应，从而实现更好的控制和更有效的连接管理。
+由于多路复用允许客户端并行构造多个流，因此这些流仅需要利用单个TCP连接。每个起点只有一个持久连接，可以通过减少整个网络的内存和处理占用空间来改善HTTP/1.1。这导致更好的网络和带宽利用率，从而降低了总体运营成本。
+单个TCP连接还可以提高HTTPS协议的性能，因为客户端和服务器可以将相同的安全会话重用于多个请求/响应。在HTTPS中，在TLS或SSL握手期间，双方都同意在整个会话过程中使用单个密钥。如果连接断开，则新的会话开始，需要新生成的密钥用于进一步的通信。因此，维护单个连接可以大大减少HTTPS性能所需的资源。请注意，尽管HTTP/2规范没有强制要求使用TLS层，但许多主流浏览器仅支持HTTP/2和HTTPS。
+尽管二进制框架层中固有的多路复用解决了HTTP/1.1的某些问题，但是等待相同资源的多个流仍然会导致性能问题。HTTP/2的设计考虑了这一点，但是，通过使用流优先级，我们将在下一节中讨论这个主题。
+HTTP/2 —流优先级 流优先级划分不仅解决了争用同一资源的请求的可能问题，而且还允许开发人员自定义请求的相对权重，以更好地优化应用程序性能。在本节中，我们将分解优先级划分过程，以便更好地了解如何利用HTTP/2的此功能。
+众所周知，二进制框架层将消息组织成并行的数据流。当客户端将并发请求发送到服务器时，它可以通过为每个流分配1到256之间的权重来区分请求的响应的优先级。数字越高表示优先级越高。除此之外，客户端还通过指定流所依赖的流的ID来声明每个流对另一流的依赖性。如果省略了父标识符，则认为该流依赖于根流。下图对此进行了说明：
+在图示中，该频道包含六个流，每个流具有唯一的ID并与特定的权重关联。流1没有与其关联的父ID，并且默认情况下与根节点关联。所有其他流都标记了一些父ID。每个流的资源分配将基于它们所拥有的权重及其所需的依赖关系。例如，在图中已分配了相同权重和相同父流的流5和6，将具有相同的资源分配优先级。
+服务器使用此信息来创建依赖关系树，该依赖关系树允许服务器确定请求检索其数据的顺序。根据上图中的流，依赖关系树如下：
+在此依赖关系树中，流1依赖于根流，并且没有其他从根派生的流，因此所有可用资源将在其他流之前分配给流1。由于树表明流2取决于流1的完成，因此直到流1任务完成，流2才继续进行。现在，让我们看一下流3和4。这两个流都依赖于流2。与流1的情况一样，流2将获得流3和4之前的所有可用资源。流2完成其任务后，流3和4将获得资源；如它们的权重所示，它们按2：4的比例进行分配，从而导致流4的资源更多。最后，当流3完成时，流5和6将获得相等的可用资源。即使流4接收到更多的资源，这也可能在流4完成其任务之前发生。较高级别的从属流结束后，就可以开始较低级别的流。
+作为应用程序开发人员，您可以根据需要在请求中设置权重。例如，在网页上提供缩略图后，可以为较低的优先级分配高分辨率的图像。通过提供这种权重分配功能，HTTP/2使开发人员可以更好地控制网页渲染。该协议还允许客户端响应于用户交互而在运行时更改依赖关系并重新分配权重。但是，请务必注意，如果某个流被阻止访问特定资源，则服务器可以自行更改分配的优先级。
+缓冲区溢出 在两台机器之间的任何TCP连接中，客户端和服务器都有一定数量的缓冲区空间可用于容纳尚未处理的传入请求。除了下游和上游连接的速度不均匀之外，这些缓冲区还提供了灵活性，可以解决众多或特别大的请求。
+但是，在某些情况下，缓冲区不足。例如，由于缓冲区大小有限或带宽较低，服务器可能以客户端应用程序无法应对的速度推送大量数据。同样，当客户端将巨大的图像或视频上传到服务器时，服务器缓冲区可能会溢出，从而导致一些其他数据包丢失。
+为了避免缓冲区溢出，流控制机制必须防止发送方用数据淹没接收方。本节将概述HTTP/1.1和HTTP/2如何根据其不同的传递模型使用此机制的不同版本来处理流控制。
+HTTP/1.1 在HTTP/1.1中，流控制依赖于基础TCP连接。启动此连接时，客户端和服务器均使用其系统默认设置来建立其缓冲区大小。如果接收方的缓冲区部分填充了数据，它将告诉发送方其接收窗口，即，缓冲区中剩余的可用空间量。该接收窗口在称为ACK数据包的信号中公告，这是接收器发送的数据包，用于确认已接收到打开信号。如果此公告的接收窗口大小为零，则发送方将不再发送任何数据，直到客户端清除其内部缓冲区，然后请求恢复数据传输为止。在此处需要注意的重要一点是，使用基于基础TCP连接的接收窗口只能在连接的任一端实现流控制。
+因为HTTP/1.1依赖传输层来避免缓冲区溢出，所以每个新的TCP连接都需要单独的流控制机制。但是，HTTP/2在单个TCP连接中多路复用流，并且必须以不同的方式实现流控制。
+HTTP/2 HTTP/2在单个TCP连接中多路复用数据流。结果，TCP连接级别的接收窗口不足以调节单个流的传递。HTTP/2通过允许客户端和服务器实现自己的流控制，而不是依靠传输层来解决此问题。应用程序层传达可用的缓冲区空间，从而允许客户端和服务器在多路复用流的级别上设置接收窗口。在通过WINDOW_UPDATE框架进行初始连接后，可以修改或保持这种精细的流量控制。
+由于此方法在应用程序层的级别上控制数据流，因此在调整接收窗口之前，流控制机制不必等待信号到达其最终目的地。中间节点可以使用流控制设置信息来确定自己的资源分配并相应地进行修改。这样，每个中间服务器都可以实现自己的自定义资源策略，从而提高连接效率。
+在创建适当的资源策略时，流控制的这种灵活性可能是有利的。例如，客户端可以获取图像的第一次扫描，将其显示给用户，并允许用户预览图像，同时获取更多关键资源。客户端获取这些关键资源后，浏览器将恢复图像剩余部分的检索。因此，将流控制的实现推迟到客户端和服务器可以提高Web应用程序的感知性能。
+在前面一节中提到的流控制和流优先级方面，HTTP/2提供了更详细的控制级别，为进一步优化提供了可能。下一节将说明该协议特有的另一种方法，该方法可以通过类似的方式增强连接：使用服务器push预测资源请求。
+预测资源请求 在典型的Web应用程序中，客户端将发送GET请求并接收HTML页面，通常是网站的索引页面。在检查索引页面内容时，客户端可能发现它需要获取其他资源（例如CSS和JavaScript文件）才能完全呈现页面。客户端仅在收到其初始GET请求的响应后，才确定需要这些额外的资源，因此客户端必须提出其他请求以获取这些资源并完成将页面放在一起。这些额外的请求最终会增加连接加载时间。
+但是，有一些解决方案可以解决此问题：由于服务器预先知道客户端将需要其他文件，因此服务器可以通过在请求这些资源之前将这些资源发送给客户端来节省客户端时间。HTTP/1.1和HTTP/2具有实现此目的的不同策略，每种策略将在下一节中介绍。
+HTTP/1.1 —资源内联 在HTTP/1.1中，如果开发人员事先知道客户端计算机需要呈现页面的哪些其他资源，则他们可以使用一种称为资源内联的技术将所需资源直接包含在服务器为响应该请求而发送的HTML文档中。最初的GET要求。例如，如果客户端需要特定的CSS文件来呈现页面，则内联该CSS文件将在客户端请求之前为客户端提供所需的资源，从而减少了客户端必须发送的请求总数。
+但是资源内联存在一些问题。对于较小的基于文本的资源，将资源包括在HTML文档中是一个可行的解决方案，但是非文本格式的较大文件会大大增加HTML文档的大小，最终会降低连接速度并抵消最初获得的优势使用这项技术。而且，由于内联资源不再与HTML文档分开，因此客户端没有机制可以拒绝客户端已经拥有的资源或将资源放入其缓存中。如果有多个页面需要该资源，则每个新HTML文档的代码中都将内联相同的资源，这导致HTML文档更大，并且加载时间比起初仅在资源中进行缓存的时间长。
+因此，资源内联的主要缺点是客户端无法分离资源和文档。需要更好的控制级别来优化连接，HTTP/2试图通过服务器推送来满足这一需求。</description>
+    </item>
+    
+    <item>
+      <title>Window下的VScode快捷键</title>
+      <link>https://baraka-sdw.github.io/posts/window%E4%B8%8B%E7%9A%84vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Sun, 29 Sep 2019 12:42:20 +0800</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/window%E4%B8%8B%E7%9A%84vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>转载自4ark
+全局 Ctrl + Shift + P, F1 显示命令面板 Ctrl + P 快速打开
+Ctrl + Shift + N 打开新窗口
+Ctrl + Shift + W 关闭窗口
+基本 Ctrl + X 剪切（未选中文本的情况下，剪切光标所在行） Ctrl + C 复制（未选中文本的情况下，复制光标所在行）
+Alt + Up 向上移动行
+Alt + Down 向下移动行
+Shift + Alt + Up 向上复制行
+Shift + Alt + Down 向下复制行
+Ctrl + Shift + K 删除行
+Ctrl + Enter 下一行插入
+Ctrl + Shift + Enter 上一行插入</description>
+    </item>
+    
+    <item>
+      <title>给博客增加豆瓣观影和阅读</title>
+      <link>https://baraka-sdw.github.io/posts/%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E8%B1%86%E7%93%A3%E8%A7%82%E5%BD%B1%E5%92%8C%E9%98%85%E8%AF%BB/</link>
+      <pubDate>Mon, 23 Sep 2019 13:08:20 +0800</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E8%B1%86%E7%93%A3%E8%A7%82%E5%BD%B1%E5%92%8C%E9%98%85%E8%AF%BB/</guid>
+      <description>第一步 进入这个网站注册账号布克牧为 ，填写豆瓣id，豆瓣id是9位数字，到豆瓣官网找即可 第二步 同步数据 第三步 使用，查看API说明 https://github.com/iMuFeng/bmdb/blob/master/README.md
+把密钥换成自己的就行了
+第三步 添加到自己得博客，我是用hugo搭建得blog，以hugo为例，添加两个menu，指向到生成的html就行
+[[menu.main]] name = &amp;#34;观影&amp;#34; url = &amp;#34;/movie/&amp;#34; weight = 5 [[menu.main]] name = &amp;#34;阅读&amp;#34; url = &amp;#34;/book/&amp;#34; weight = 6 效果 总结 1.发现一个问题，豆瓣取消评价后，同步数据，观影数据还在，已反馈给作者，等待作者修复。2.另外使用chrome同步数据时，同步请求会出现canned问题，建议使用edge或其他浏览器。</description>
+    </item>
+    
+    <item>
+      <title>Alpha、Beta、RC、GA版本的区别</title>
+      <link>https://baraka-sdw.github.io/posts/alphabetarcga%E7%89%88%E6%9C%AC%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Fri, 26 Jul 2019 08:00:31 +0000</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/alphabetarcga%E7%89%88%E6%9C%AC%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>Alpha： 是内部测试版,一般不向外部发布,会有很多Bug.一般只有测试人员使用。
+Beta： 也是测试版，这个阶段的版本会一直加入新的功能。在Alpha版之后推出。
+RC：(Release　Candidate)： 顾名思义么 ! 用在软件上就是候选版本。系统平台上就是发行候选版本。RC版不会再加入新的功能了，主要着重于除错。
+GA:General Availability： 正式发布的版本，在国外都是用GA来说明release版本的。
+RTM：(Release to Manufacture)： 是给工厂大量压片的版本，内容跟正式版是一样的，不过RTM版也有出限制、评估版的。但是和正式版本的主要程序代码都是一样的。
+OEM： 是给计算机厂商随着计算机贩卖的，也就是随机版。只能随机器出货，不能零售。只能全新安装，不能从旧有操作系统升级。包装不像零售版精美，通常只有一面CD和说明书(授权书)。
+RVL： 号称是正式版，其实RVL根本不是版本的名称。它是中文版/英文版文档破解出来的。
+EVAL： 而流通在网络上的EVAL版，与“评估版”类似，功能上和零售版没有区别。
+RTL：Retail(零售版)： 是真正的正式版，正式上架零售版。在安装盘的i386文件夹里有一个eula.txt，最后有一行EULAID，就是你的版本。比如简体中文正式版是EULAID:WX.4_PRO_RTL_CN，繁体中文正式版是WX.4_PRO_RTL_TW。其中：如果是WX.开头是正式版，WB.开头是测试版。_PRE，代表家庭版；_PRO，代表专业版。
+α、β、λ： α、β、λ常用来表示软件测试过程中的三个阶段，α是第一阶段，一般只供内部测试使用；β是第二个阶段，已经消除了软件中大部分的不完善之处，但仍有可能还存在缺陷和漏洞，一般只提供给特定的用户群来测试使用；λ是第三个阶段，此时产品已经相当成熟，只需在个别地方再做进一步的优化处理即可上市发行。
+转自: http://www.blogjava.net/RomulusW/archive/2008/05/04/197985.html&amp;lt;br/&amp;gt; 作者：REX</description>
+    </item>
+    
+    <item>
+      <title>Java魔法类：Unsafe应用解析</title>
+      <link>https://baraka-sdw.github.io/posts/java%E9%AD%94%E6%B3%95%E7%B1%BBunsafe%E5%BA%94%E7%94%A8%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Wed, 19 Jun 2019 23:09:31 +0000</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/java%E9%AD%94%E6%B3%95%E7%B1%BBunsafe%E5%BA%94%E7%94%A8%E8%A7%A3%E6%9E%90/</guid>
+      <description>Unsafe是位于sun.misc包下的一个类，主要提供一些用于执行低级别、不安全操作的方法，如直接访问系统内存资源、自主管理内存资源等，这些方法在提升Java运行效率、增强Java语言底层资源操作能力方面起到了很大的作用。但由于Unsafe类使Java语言拥有了类似C语言指针一样操作内存空间的能力，这无疑也增加了程序发生相关指针问题的风险。在程序中过度、不正确使用Unsafe类会使得程序出错的概率变大，使得Java这种安全的语言变得不再“安全”，因此对Unsafe的使用一定要慎重。注：本文对sun.misc.Unsafe公共API功能及相关应用场景进行介绍。
+基本介绍 如下Unsafe源码所示，Unsafe类为一单例实现，提供静态方法getUnsafe获取Unsafe实例，当且仅当调用getUnsafe方法的类为引导类加载器所加载时才合法，否则抛出SecurityException异常。
+public final class Unsafe { // 单例对象  private static final Unsafe theUnsafe; private Unsafe() { } @CallerSensitive public static Unsafe getUnsafe() { Class var0 = Reflection.getCallerClass(); // 仅在引导类加载器`BootstrapClassLoader`加载时才合法  if(!VM.isSystemDomainLoader(var0.getClassLoader())) { throw new SecurityException(&amp;#34;Unsafe&amp;#34;); } else { return theUnsafe; } } } 那如若想使用这个类，该如何获取其实例？有如下两个可行方案。其一，从getUnsafe方法的使用限制条件出发，通过Java命令行命令-Xbootclasspath/a把调用Unsafe相关方法的类A所在jar包路径追加到默认的bootstrap路径中，使得A被引导类加载器加载，从而通过Unsafe.getUnsafe方法安全的获取Unsafe实例。
+java -Xbootclasspath/a: ${path} // 其中path为调用Unsafe相关方法的类所在jar包路径  其二，通过反射获取单例对象theUnsafe。
+private static Unsafe reflectGetUnsafe() { try { Field field = Unsafe.class.getDeclaredField(&amp;#34;theUnsafe&amp;#34;); field.setAccessible(true); return (Unsafe) field.get(null); } catch (Exception e) { log.</description>
+    </item>
+    
+    <item>
+      <title>Vim常用命令总结</title>
+      <link>https://baraka-sdw.github.io/posts/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 01 Nov 2018 23:09:37 +0800</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;vim常用命令总结 （转)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>测试添加视频</title>
+      <link>https://baraka-sdw.github.io/posts/%E6%B5%8B%E8%AF%95%E8%A7%86%E9%A2%91/</link>
+      <pubDate>Wed, 31 Oct 2018 23:08:06 +0000</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/%E6%B5%8B%E8%AF%95%E8%A7%86%E9%A2%91/</guid>
+      <description>Your browser does not support the video tag.{% btn http://app.flvcd.com/bigrats_setup_0.4.8.1.exe, 点击下载硕鼠, download fa-lg fa-fw %}
+调用的视频格式：
+&amp;lt;video poster=&amp;quot;https://封面图.jpg&amp;quot; src=&amp;quot;https://****.mp4&amp;quot; style=&amp;quot;max-height :100%; max-width: 100%; display: block; margin-left: auto; margin-right: auto;&amp;quot; controls=&amp;quot;controls&amp;quot; loop=&amp;quot;loop&amp;quot; preload=&amp;quot;meta&amp;quot;&amp;gt;Your browser does not support the video tag.&amp;lt;/video&amp;gt; 3.对hexo优化加速导致的Tag Cloud不可用问题 利用利用 InstantClick、hexo-service-worker、hexo-filter-optimize 加速博客时， Js 的Bundle属性要改为false,为true时Tag Cloud会失效
+  </description>
+    </item>
+    
+    <item>
+      <title>Java文档注释</title>
+      <link>https://baraka-sdw.github.io/posts/java%E6%96%87%E6%A1%A3%E6%B3%A8%E9%87%8A/</link>
+      <pubDate>Wed, 13 Jun 2018 16:58:31 +0000</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/java%E6%96%87%E6%A1%A3%E6%B3%A8%E9%87%8A/</guid>
+      <description>1.3 javadoc 输出什么 javadoc 工具将你 Java 程序的源代码作为输入，输出一些包含你程序注释的HTML文件。 每一个类的信息将在独自的HTML文件里。javadoc 也可以输出继承的树形结构和索引。 由于 javadoc 的实现不同，工作也可能不同，你需要检查你的 Java 开发系统的版本等细节，选择合适的 Javadoc 版本。
+下面是一个使用说明注释的简单实例。注意每一个注释都在它描述的项目的前面。 在经过 javadoc 处理之后，SquareNum 类的注释将在 SquareNum.html 中找到。
+import java.io.*; /** * 这个类演示了文档注释 * @author sdw * @version 1.2 */ public class SquareNum { /** * This method returns the square of num. * This is a multiline description. You can use * as many lines as you like. * @param num The value to be squared.</description>
+    </item>
+    
+    <item>
+      <title>JVM中的逃逸分析</title>
+      <link>https://baraka-sdw.github.io/posts/jvm%E4%B8%AD%E7%9A%84%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/</link>
+      <pubDate>Fri, 08 Jun 2018 23:39:33 +0000</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/jvm%E4%B8%AD%E7%9A%84%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/</guid>
+      <description>1.概念引入 逃逸分析(Escape Analysis)是目前Java虚拟机中比较前沿的优化技术。
+逃逸分析的基本行为就是分析对象动态作用域：当一个对象在方法中被定义后，它可能被外部方法所引用，例如作为调用参数传递到其他地方中，称为方法逃逸。 Java 创建的对象都是被分配到堆内存上，但是事实并不是这么绝对，通过对Java对象分配的过程分析，可以知道有两个地方会导致Java中创建出来的对象并一定分别在所认为的堆上。这两个点分别是Java中的逃逸分析和TLAB（Thread Local Allocation Buffer）线程私有的缓存区。
+2.基本概念介绍 逃逸分析，是一种可以有效减少Java程序中同步负载和内存堆分配压力的跨函数全局数据流分析算法。通过逃逸分析，Java Hotspot编译器能够分析出一个新的对象的引用的使用范围从而决定是否要将这个对象分配到堆上。
+在计算机语言编译器优化原理中，逃逸分析是指分析指针动态范围的方法，它同编译器优化原理的指针分析和外形分析相关联。当变量（或者对象）在方法中分配后，其指针有可能被返回或者被全局引用，这样就会被其他过程或者线程所引用，这种现象称作指针（或者引用）的逃逸(Escape)。通俗点讲，如果一个对象的指针被多个方法或者线程引用时，那么我们就称这个对象的指针发生了逃逸。
+Java在Java SE 6u23以及以后的版本中支持并默认开启了逃逸分析的选项。Java的 HotSpot JIT编译器，能够在方法重载或者动态加载代码的时候对代码进行逃逸分析 逃逸分析研究对于 java 编译器有什么好处呢？我们知道 java 对象总是在堆中被分配的，因此 java 对象的创建和回收对系统的开销是很大的。java 语言被批评的一个地方，也是认为 java 性能慢的一个原因就是 java不支持栈上分配对象。JDK6里的 Swing内存和性能消耗的瓶颈就是由于 GC 来遍历引用树并回收内存的，如果对象的数目比较多，将给 GC 带来较大的压力，也间接得影响了性能。减少临时对象在堆内分配的数量，无疑是最有效的优化方法。java 中应用里普遍存在一种场景，一般是在方法体内，声明了一个局部变量，并且该变量在方法执行生命周期内未发生逃逸，按照 JVM内存分配机制，首先会在堆内存上创建类的实例（对象），然后将此对象的引用压入调用栈，继续执行，这是 JVM优化前的方式。当然，我们可以采用逃逸分析对 JVM 进行优化。即针对栈的重新分配方式，首先我们需要分析并且找到未逃逸的变量，将该变量类的实例化内存直接在栈里分配，无需进入堆，分配完成之后，继续调用栈内执行，最后线程执行结束，栈空间被回收，局部变量对象也被回收，通过这种方式的优化，与优化前的方案主要区别在于对象的存储介质，优化前是在堆中，而优化后的是在栈中，从而减少了堆中临时对象的分配（较耗时），从而优化性能。
+示例:性能分析
+public class EscapeAnalysis { private static class Foo { private int x; private static int counter; public Foo() { x = (++counter); } } public static void main(String[] args) { long start = System.</description>
+    </item>
+    
+    <item>
+      <title>利用Chrome浏览器实现滚动截屏</title>
+      <link>https://baraka-sdw.github.io/posts/%E5%88%A9%E7%94%A8chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%9E%E7%8E%B0%E6%BB%9A%E5%8A%A8%E6%88%AA%E5%B1%8F/</link>
+      <pubDate>Thu, 24 May 2018 09:07:47 +0000</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/%E5%88%A9%E7%94%A8chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%9E%E7%8E%B0%E6%BB%9A%E5%8A%A8%E6%88%AA%E5%B1%8F/</guid>
+      <description>1.截取整个页面 1.1 打开 Chrome 浏览器，进入需要截图的网站页面 1.2 打开开发者工具，Window下快捷键 Ctrl + Shift + I   1.3 使用快捷键组合来打开命令行，Ctrl + Shift + P (Windows)   1.4 在命令行中输入“Screen”，找到“Capture full size screenshot”并回车 在此之后，Chrome会将截图下载到电脑设定的下载区域。
+  2.截取局部元素 2.1 点击开发者工具左上角的“选取元素”按钮，在网页中点击要截图的元素 2.2 由于HTML父子元素的嵌套,可能选中的是需要截图元素的子元素,这时，需要在开发者工具中对所选取的元素进行调整：由于选取的是子元素, 所以只需要在“选取元素”按钮，旁边的&amp;quot;Elements Tab&amp;quot;里边按照嵌套关系，找到合适的父元素就可以了。这时，点击选中该父元素。
+2.3 打开命令行，进行截图命令（方法和上面第四步类似）。不过需要注意这时在包含 &amp;ldquo;Screen&amp;rdquo; 关键字的命令中选取“Capture node screenshot”而非“Capture full size screenshot”。 扩展：利用 Chrome 的开发者工具，还可以实现对不同型号手机整个页面的截图 点击开发者工具左上角的视图转换按钮(Ctrl + Shift + M)，这时浏览器中的页面会呈现出手机视图。同时，在浏览器中还可以选择不同的 的手机或者平板型号来对比不同硬件上观看页面的不同效果,重新加载页面,打开命令行，进行截图命令
+  </description>
+    </item>
+    
+    <item>
+      <title>利用svn补丁，打增量包</title>
+      <link>https://baraka-sdw.github.io/posts/svn%E5%A2%9E%E9%87%8F%E6%9B%B4%E6%96%B0/</link>
+      <pubDate>Tue, 10 Apr 2018 17:20:11 +0000</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/svn%E5%A2%9E%E9%87%8F%E6%9B%B4%E6%96%B0/</guid>
+      <description>先创建补丁   生成增量包代码 import java.io.BufferedInputStream; import java.io.BufferedOutputStream; import java.io.BufferedReader; import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; import java.io.IOException; import java.io.InputStreamReader; import java.util.ArrayList; import java.util.List; public class FreePatchUtil { public static String projectPath = &amp;#34;F:/BANKSERVERS/Ticm/TicmHB/src/main/java&amp;#34;;	//代码目录 	public static String projectPath2 = &amp;#34;F:/BANKSERVERS/Ticm/TicmHB/WebRoot&amp;#34;;	//webRoot目录 	public static String classPath = &amp;#34;F:/BANKSERVERS/Ticm/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/TicmHB/WEB-INF/classes&amp;#34;;//项目编译后的classes目录 	public static String patchFile = &amp;#34;F:/patch/patch.txt&amp;#34;;	//升级补丁描述文件路径 	public static String desPath = &amp;#34;F:/patch/update&amp;#34;;	//打包后升级包补丁包存放目录 	public static String version = &amp;#34;20180426&amp;#34;;	//补丁版本号 	/** * @param args * @throws Exception */ public static void main(String[] args) throws Exception { copyFiles(getPatchFileList()); } /** * 分析svn补丁文件 * @return * @throws Exception */ public static List&amp;lt;String&amp;gt; getPatchFileList() throws Exception { List&amp;lt;String&amp;gt; fileList=new ArrayList&amp;lt;String&amp;gt;(); FileInputStream f = new FileInputStream(patchFile); BufferedReader dr = new BufferedReader(new InputStreamReader(f,&amp;#34;utf-8&amp;#34;)); String line; while((line=dr.</description>
+    </item>
+    
+    <item>
+      <title>用好搜索引擎，学习事半功倍</title>
+      <link>https://baraka-sdw.github.io/posts/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Tue, 03 Apr 2018 17:20:11 +0000</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%91%BD%E4%BB%A4/</guid>
+      <description>精确搜索符 引号：&amp;rdquo;&amp;rdquo; 用于强调内容的连续性和完整性。
+单书名号：&amp;lt;&amp;gt; 用法及功能同引号
+通配符 星号：* 用于代指未知内容。 例： 题目：两个( )鸣翠柳，一行白( )上青天。 搜索内容：两个鸣翠柳，一行上青天。 这句话翻译成人话就是：两个什么鸣翠柳，一行什么上青天。 *可以代指多个未知字符。 如图：
+  不过好像还不够准确
+问号：? 用于代指未知内容。 例： 题目：两个( )鸣翠柳，一行白( )上青天。 搜索内容：两个??鸣翠柳，一行??上青天。 这句话翻译成人话就是：两个什么鸣翠柳，一行什么上青天。 ?只能代指一个未知字符。 如图：
+  问好比星号靠谱多了。
+括号：() 用于强调内容是一个整体，无实际意义。
+###排除符和包含符：- 用于表示搜索的结果必须排除包含这些内容的项目。 例： 题目：我们需要搜索iPhone，但是不要6。 搜索内容：iPhone -(6) 如图：
+  注意：减号前面的空格一定要有！！！！！！！！！排除的内容一定要加括号！！！！！！！！加号：+ 用于表示搜索的结果必须含有包含这些内容的项目。 例：搜索：iPhone +(X) +(8s) 如图：
+  简易语句 在标题语句：intitle: 用于只搜索在标题中含有关键词的结果 例：要搜以国别数据为标题的结果。 搜索内容：intitle:头号玩家 如图：
+  在链接语句：inurl: 用于只搜索在链接中含有关键词的结果 例：搜索.net 架构的网站 搜索内容：inurl:asp?id= 如图：
+  站内搜索语句：site: 用于只在一个网站内部搜索 例：查找找C语言教程 搜索内容：C语言教程 site:cnhonkerarmy.</description>
+    </item>
+    
+  </channel>
+</rss>

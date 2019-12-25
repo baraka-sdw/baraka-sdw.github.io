@@ -1,0 +1,202 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Baraka的博客 on Baraka的博客</title>
+    <link>https://baraka-sdw.github.io/</link>
+    <description>Recent content in Baraka的博客 on Baraka的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn&#39;</language>
+    <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
+    <lastBuildDate>Wed, 25 Dec 2019 08:54:41 +0800</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Posts</title>
+      <link>https://baraka-sdw.github.io/posts/</link>
+      <pubDate>Wed, 25 Dec 2019 08:54:41 +0800</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Movie</title>
+      <link>https://baraka-sdw.github.io/movie/</link>
+      <pubDate>Mon, 16 Sep 2019 12:35:20 +0800</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/movie/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;.container {
+  width: 1000px;
+  margin: auto
+}
+
+@media screen and (max-width:768px) {
+  .container {
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://baraka-sdw.github.io/about/</link>
+      <pubDate>Mon, 29 Oct 2018 21:29:03 +0800</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/about/</guid>
+      <description>&lt;p&gt;醲肥辛甘非真味，真味只是淡；神奇卓异非至人，至人只是常。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://baraka-sdw.github.io/book/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/book/</guid>
+      <description>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;UTF-8&#34;&gt;
+  &lt;meta name=&#34;referrer&#34; content=&#34;never&#34;&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+  &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;ie=edge&#34;&gt;
+  &lt;title&gt;bmdb&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      margin: 50px 0;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+      -webkit-size-adjust: 100%;
+    }
+
+    .container {
+      width: 1000px;
+      margin: auto
+    }
+
+    @media screen and (max-width:768px) {
+      .container {
+        width: auto;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+    h1 {
+      color: #DA3E3E;
+      text-align: center;
+      font-size: 26px;
+      margin: 12px 0 8px 0;
+      font-weight: 600;
+      letter-spacing: 2px;
+   }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1 class=&#34;entry-title&#34;&gt;我的阅读
+        &lt;/h1&gt; 
+    &lt;/header&gt;
+  &lt;div class=&#34;container&#34;&gt;&lt;/div&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js&#34;&gt;&lt;/script&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.2.1/dist/Bmdb.min.css&#34;&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.2.1/dist/Bmdb.min.js&#34;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;script&gt;
+  new Bmdb({
+    type: &#39;books&#39;,
+    selector: &#39;.container&#39;,
+    cache: true,
+    showCategories: true,
+    noMoreText: &#39;没有更多数据了&#39;,
+    secret: &#39;e1d2412afded3f3e78a4d8c08b924888e008b05f3c96f03d1b5ce136a1a4016c&#39;
+  })
+&lt;/script&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://baraka-sdw.github.io/movie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/movie/</guid>
+      <description>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;UTF-8&#34;&gt;
+  &lt;meta name=&#34;referrer&#34; content=&#34;never&#34;&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+  &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;ie=edge&#34;&gt;
+  &lt;title&gt;bmdb&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      margin: 50px 0;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
+      -webkit-size-adjust: 100%;
+    }
+
+    .container {
+      width: 1000px;
+      margin: auto
+    }
+
+    @media screen and (max-width:768px) {
+      .container {
+        width: auto;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+    h1 {
+      color: #DA3E3E;
+      text-align: center;
+      font-size: 26px;
+      margin: 12px 0 8px 0;
+      font-weight: 600;
+      letter-spacing: 2px;
+   }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1 class=&#34;entry-title&#34;&gt;我的观影
+        &lt;/h1&gt; 
+    &lt;/header&gt;
+  &lt;div class=&#34;container&#34;&gt;&lt;/div&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js&#34;&gt;&lt;/script&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.2.1/dist/Bmdb.min.css&#34;&gt;
+  &lt;script src=&#34;https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.2.1/dist/Bmdb.min.js&#34;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;script&gt;
+  new Bmdb({
+    type: &#39;movies&#39;,
+    selector: &#39;.container&#39;,
+    cache: true,
+    showCategories: true,
+    noMoreText: &#39;没有更多数据了&#39;,
+    secret: &#39;e1d2412afded3f3e78a4d8c08b924888e008b05f3c96f03d1b5ce136a1a4016c&#39;
+  })
+&lt;/script&gt;
+&lt;/html&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-cn&#39;">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Baraka">
+  <meta name="description" content="无">
+  <meta name="keywords" content="baraka">
+  
+  <link rel="prev" href="https://baraka-sdw.github.io/posts/java%E9%AD%94%E6%B3%95%E7%B1%BBunsafe%E5%BA%94%E7%94%A8%E8%A7%A3%E6%9E%90/" />
+  <link rel="next" href="https://baraka-sdw.github.io/posts/%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E8%B1%86%E7%93%A3%E8%A7%82%E5%BD%B1%E5%92%8C%E9%98%85%E8%AF%BB/" />
+  <link rel="canonical" href="https://baraka-sdw.github.io/posts/alphabetarcga%E7%89%88%E6%9C%AC%E7%9A%84%E5%8C%BA%E5%88%AB/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Alpha、Beta、RC、GA版本的区别 | Baraka的博客
+       
+  </title>
+  <meta name="title" content="Alpha、Beta、RC、GA版本的区别 | Baraka的博客">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/baraka-sdw.github.io\/"
+    },
+    "articleSection" : "posts",
+    "name" : "Alpha、Beta、RC、GA版本的区别",
+    "headline" : "Alpha、Beta、RC、GA版本的区别",
+    "description" : "Alpha： 是内部测试版,一般不向外部发布,会有很多Bug.一般只有测试人员使用。\nBeta： 也是测试版，这个阶段的版本会一直加入新的功能。在Alpha版之后推出。\nRC：(Release　Candidate)： 顾名思义么 ! 用在软件上就是候选版本。系统平台上就是发行候选版本。RC版不会再加入新的功能了，主要着重于除错。\nGA:General Availability： 正式发布的版本，在国外都是用GA来说明release版本的。\nRTM：(Release to Manufacture)： 是给工厂大量压片的版本，内容跟正式版是一样的，不过RTM版也有出限制、评估版的。但是和正式版本的主要程序代码都是一样的。\nOEM： 是给计算机厂商随着计算机贩卖的，也就是随机版。只能随机器出货，不能零售。只能全新安装，不能从旧有操作系统升级。包装不像零售版精美，通常只有一面CD和说明书(授权书)。\nRVL： 号称是正式版，其实RVL根本不是版本的名称。它是中文版\/英文版文档破解出来的。\nEVAL： 而流通在网络上的EVAL版，与“评估版”类似，功能上和零售版没有区别。\nRTL：Retail(零售版)： 是真正的正式版，正式上架零售版。在安装盘的i386文件夹里有一个eula.txt，最后有一行EULAID，就是你的版本。比如简体中文正式版是EULAID:WX.4_PRO_RTL_CN，繁体中文正式版是WX.4_PRO_RTL_TW。其中：如果是WX.开头是正式版，WB.开头是测试版。_PRE，代表家庭版；_PRO，代表专业版。\nα、β、λ： α、β、λ常用来表示软件测试过程中的三个阶段，α是第一阶段，一般只供内部测试使用；β是第二个阶段，已经消除了软件中大部分的不完善之处，但仍有可能还存在缺陷和漏洞，一般只提供给特定的用户群来测试使用；λ是第三个阶段，此时产品已经相当成熟，只需在个别地方再做进一步的优化处理即可上市发行。\n转自: http:\/\/www.blogjava.net\/RomulusW\/archive\/2008\/05\/04\/197985.html\x26lt;br\/\x26gt; 作者：REX",
+    "inLanguage" : "zh-cn\x27",
+    "author" : "Baraka",
+    "creator" : "Baraka",
+    "publisher": "Baraka",
+    "accountablePerson" : "Baraka",
+    "copyrightHolder" : "Baraka",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-26 08:00:31 \x2b0000 UTC",
+    "dateModified" : "2019-07-26 08:00:31 \x2b0000 UTC",
+    "url" : "https:\/\/baraka-sdw.github.io\/posts\/alphabetarcga%E7%89%88%E6%9C%AC%E7%9A%84%E5%8C%BA%E5%88%AB\/",
+    "wordCount" : "29",
+    "keywords" : [ "版本", "Baraka的博客"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://baraka-sdw.github.io/">Baraka的博客</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">归档</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="">关于</a>
+                
+                <a class="menu-item" href="/movie/" title="">观影</a>
+                
+                <a class="menu-item" href="/book/" title="">阅读</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://baraka-sdw.github.io/">Baraka的博客</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">归档</a>
+                
+                <a class="menu-item" href="/categories/" title="">分类</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="">关于</a>
+                
+                <a class="menu-item" href="/movie/" title="">观影</a>
+                
+                <a class="menu-item" href="/book/" title="">阅读</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Alpha、Beta、RC、GA版本的区别</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://baraka-sdw.github.io/" rel="author">Baraka</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-26 itemprop="datePublished">July 26, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://baraka-sdw.github.io/categories/%E7%99%BE%E7%A7%91/"> 百科 </a>
+                        
+                </span>
+
+                |
+                <a href="#gitalk-container" itemprop="discussionUrl">
+                    <span class="post-comments-count gitalk-comment-count" itemprop="commentCount"></span>
+                </a>
+                条评论
+        </div>
+    </header>
+
+        
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title"></h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#alpha">Alpha：</a></li>
+        <li><a href="#beta">Beta：</a></li>
+        <li><a href="#rcreleasecandidate">RC：(Release　Candidate)：</a></li>
+        <li><a href="#gageneral-availability">GA:General Availability：</a></li>
+        <li><a href="#rtmrelease-to-manufacture">RTM：(Release to Manufacture)：</a></li>
+        <li><a href="#oem">OEM：</a></li>
+        <li><a href="#rvl">RVL：</a></li>
+        <li><a href="#eval">EVAL：</a></li>
+        <li><a href="#rtlretail">RTL：Retail(零售版)：</a></li>
+        <li><a href="#heading">α、β、λ：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+
+    <div class="post-content">
+        
+
+        
+
+        <img src="https://sdw-1254060699.cos.ap-chengdu.myqcloud.com/bing_photos/20190726.jpg" class="featured_image">
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h3 id="alpha">Alpha：</h3>
+<p>是内部测试版,一般不向外部发布,会有很多Bug.一般只有测试人员使用。</p>
+<h3 id="beta">Beta：</h3>
+<p>也是测试版，这个阶段的版本会一直加入新的功能。在Alpha版之后推出。</p>
+<h3 id="rcreleasecandidate">RC：(Release　Candidate)：</h3>
+<p>顾名思义么 ! 用在软件上就是候选版本。系统平台上就是发行候选版本。RC版不会再加入新的功能了，主要着重于除错。</p>
+<h3 id="gageneral-availability">GA:General Availability：</h3>
+<p>正式发布的版本，在国外都是用GA来说明release版本的。</p>
+<h3 id="rtmrelease-to-manufacture">RTM：(Release to Manufacture)：</h3>
+<p>是给工厂大量压片的版本，内容跟正式版是一样的，不过RTM版也有出限制、评估版的。但是和正式版本的主要程序代码都是一样的。</p>
+<h3 id="oem">OEM：</h3>
+<p>是给计算机厂商随着计算机贩卖的，也就是随机版。只能随机器出货，不能零售。只能全新安装，不能从旧有操作系统升级。包装不像零售版精美，通常只有一面CD和说明书(授权书)。</p>
+<h3 id="rvl">RVL：</h3>
+<p>号称是正式版，其实RVL根本不是版本的名称。它是中文版/英文版文档破解出来的。</p>
+<h3 id="eval">EVAL：</h3>
+<p>而流通在网络上的EVAL版，与“评估版”类似，功能上和零售版没有区别。</p>
+<h3 id="rtlretail">RTL：Retail(零售版)：</h3>
+<p>是真正的正式版，正式上架零售版。在安装盘的i386文件夹里有一个eula.txt，最后有一行EULAID，就是你的版本。比如简体中文正式版是EULAID:WX.4_PRO_RTL_CN，繁体中文正式版是WX.4_PRO_RTL_TW。其中：如果是WX.开头是正式版，WB.开头是测试版。_PRE，代表家庭版；_PRO，代表专业版。</p>
+<h3 id="heading">α、β、λ：</h3>
+<p>α、β、λ常用来表示软件测试过程中的三个阶段，α是第一阶段，一般只供内部测试使用；β是第二个阶段，已经消除了软件中大部分的不完善之处，但仍有可能还存在缺陷和漏洞，一般只提供给特定的用户群来测试使用；λ是第三个阶段，此时产品已经相当成熟，只需在个别地方再做进一步的优化处理即可上市发行。</p>
+<p>转自: <a href="http://www.blogjava.net/RomulusW/archive/2008/05/04/197985.html%3Cbr/%3E">http://www.blogjava.net/RomulusW/archive/2008/05/04/197985.html&lt;br/&gt;</a>
+作者：REX</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Baraka </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://baraka-sdw.github.io/posts/alphabetarcga%E7%89%88%E6%9C%AC%E7%9A%84%E5%8C%BA%E5%88%AB/>https://baraka-sdw.github.io/posts/alphabetarcga%E7%89%88%E6%9C%AC%E7%9A%84%E5%8C%BA%E5%88%AB/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://baraka-sdw.github.io/tags/%E7%89%88%E6%9C%AC/">
+                    #版本</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://baraka-sdw.github.io/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://baraka-sdw.github.io/posts/java%E9%AD%94%E6%B3%95%E7%B1%BBunsafe%E5%BA%94%E7%94%A8%E8%A7%A3%E6%9E%90/" class="prev" rel="prev" title="Java魔法类：Unsafe应用解析"><i class="iconfont icon-left"></i>&nbsp;Java魔法类：Unsafe应用解析</a>
+         
+        
+        <a href="https://baraka-sdw.github.io/posts/%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E8%B1%86%E7%93%A3%E8%A7%82%E5%BD%B1%E5%92%8C%E9%98%85%E8%AF%BB/" class="next" rel="next" title="给博客增加豆瓣观影和阅读">给博客增加豆瓣观影和阅读&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+
+    </div>
+</article>
+          
+<div class="comments-container"><div id="gitalk-container" class="gitalk-container"></div>
+    <link rel="stylesheet" href="/lib/gitalk/gitalk-1.2.2.min.css">
+    <script src="/lib/gitalk/gitalk-1.2.2.min.js"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '629914d76d2bb81d38fdc8ee7a4f244b',
+        title: 'Alpha、Beta、RC、GA版本的区别',
+        clientID: 'aca3cfd7362cc2a1edbf',
+        clientSecret: '157a41360e221c0e42aa7ac3ddc9b8c2322924d3',
+        repo: 'baraka-sdw.github.io',
+        owner: 'baraka-sdw',
+        admin: ['baraka-sdw'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a>
+    </noscript></div>
+
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2017 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://baraka-sdw.github.io/">Baraka</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unsafe on Baraka的博客</title>
+    <link>https://baraka-sdw.github.io/tags/unsafe/</link>
+    <description>Recent content in Unsafe on Baraka的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn&#39;</language>
+    <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
+    <lastBuildDate>Wed, 19 Jun 2019 23:09:31 +0000</lastBuildDate>
+    
+	<atom:link href="https://baraka-sdw.github.io/tags/unsafe/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java魔法类：Unsafe应用解析</title>
+      <link>https://baraka-sdw.github.io/posts/java%E9%AD%94%E6%B3%95%E7%B1%BBunsafe%E5%BA%94%E7%94%A8%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Wed, 19 Jun 2019 23:09:31 +0000</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/java%E9%AD%94%E6%B3%95%E7%B1%BBunsafe%E5%BA%94%E7%94%A8%E8%A7%A3%E6%9E%90/</guid>
+      <description>Unsafe是位于sun.misc包下的一个类，主要提供一些用于执行低级别、不安全操作的方法，如直接访问系统内存资源、自主管理内存资源等，这些方法在提升Java运行效率、增强Java语言底层资源操作能力方面起到了很大的作用。但由于Unsafe类使Java语言拥有了类似C语言指针一样操作内存空间的能力，这无疑也增加了程序发生相关指针问题的风险。在程序中过度、不正确使用Unsafe类会使得程序出错的概率变大，使得Java这种安全的语言变得不再“安全”，因此对Unsafe的使用一定要慎重。注：本文对sun.misc.Unsafe公共API功能及相关应用场景进行介绍。
+基本介绍 如下Unsafe源码所示，Unsafe类为一单例实现，提供静态方法getUnsafe获取Unsafe实例，当且仅当调用getUnsafe方法的类为引导类加载器所加载时才合法，否则抛出SecurityException异常。
+public final class Unsafe { // 单例对象  private static final Unsafe theUnsafe; private Unsafe() { } @CallerSensitive public static Unsafe getUnsafe() { Class var0 = Reflection.getCallerClass(); // 仅在引导类加载器`BootstrapClassLoader`加载时才合法  if(!VM.isSystemDomainLoader(var0.getClassLoader())) { throw new SecurityException(&amp;#34;Unsafe&amp;#34;); } else { return theUnsafe; } } } 那如若想使用这个类，该如何获取其实例？有如下两个可行方案。其一，从getUnsafe方法的使用限制条件出发，通过Java命令行命令-Xbootclasspath/a把调用Unsafe相关方法的类A所在jar包路径追加到默认的bootstrap路径中，使得A被引导类加载器加载，从而通过Unsafe.getUnsafe方法安全的获取Unsafe实例。
+java -Xbootclasspath/a: ${path} // 其中path为调用Unsafe相关方法的类所在jar包路径  其二，通过反射获取单例对象theUnsafe。
+private static Unsafe reflectGetUnsafe() { try { Field field = Unsafe.class.getDeclaredField(&amp;#34;theUnsafe&amp;#34;); field.setAccessible(true); return (Unsafe) field.get(null); } catch (Exception e) { log.</description>
+    </item>
+    
+  </channel>
+</rss>

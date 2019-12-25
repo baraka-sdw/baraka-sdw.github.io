@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vscode on Baraka的博客</title>
+    <link>https://baraka-sdw.github.io/tags/vscode/</link>
+    <description>Recent content in Vscode on Baraka的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn&#39;</language>
+    <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
+    <lastBuildDate>Sun, 29 Sep 2019 12:42:20 +0800</lastBuildDate>
+    
+	<atom:link href="https://baraka-sdw.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Window下的VScode快捷键</title>
+      <link>https://baraka-sdw.github.io/posts/window%E4%B8%8B%E7%9A%84vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Sun, 29 Sep 2019 12:42:20 +0800</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/window%E4%B8%8B%E7%9A%84vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>转载自4ark
+全局 Ctrl + Shift + P, F1 显示命令面板 Ctrl + P 快速打开
+Ctrl + Shift + N 打开新窗口
+Ctrl + Shift + W 关闭窗口
+基本 Ctrl + X 剪切（未选中文本的情况下，剪切光标所在行） Ctrl + C 复制（未选中文本的情况下，复制光标所在行）
+Alt + Up 向上移动行
+Alt + Down 向下移动行
+Shift + Alt + Up 向上复制行
+Shift + Alt + Down 向下复制行
+Ctrl + Shift + K 删除行
+Ctrl + Enter 下一行插入
+Ctrl + Shift + Enter 上一行插入</description>
+    </item>
+    
+  </channel>
+</rss>

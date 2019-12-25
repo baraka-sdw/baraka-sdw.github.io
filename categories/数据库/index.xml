@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据库 on Baraka的博客</title>
+    <link>https://baraka-sdw.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <description>Recent content in 数据库 on Baraka的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn&#39;</language>
+    <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
+    <lastBuildDate>Wed, 20 Nov 2019 14:06:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://baraka-sdw.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mysql笔记</title>
+      <link>https://baraka-sdw.github.io/posts/mysql%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 20 Nov 2019 14:06:00 +0800</pubDate>
+      
+      <guid>https://baraka-sdw.github.io/posts/mysql%E7%AC%94%E8%AE%B0/</guid>
+      <description>Windows服务 -- 启动MySQL net start mysql -- 创建Windows服务 sc create mysql binPath= mysqld_bin_path(注意：等号与值之间有空格) 连接与断开服务器 mysql -h 地址 -P 端口 -u 用户名 -p 密码 SHOW PROCESSLIST -- 显示哪些线程正在运行 SHOW VARIABLES -- 显示系统变量信息 数据库操作 -- 查看当前数据库 SELECT DATABASE(); -- 显示当前时间、用户名、数据库版本 SELECT now(), user(), version(); -- 创建库 CREATE DATABASE[ IF NOT EXISTS] 数据库名 数据库选项 数据库选项： CHARACTER SET charset_name COLLATE collation_name -- 查看已有库 SHOW DATABASES[ LIKE &#39;PATTERN&#39;] -- 查看当前库信息 SHOW CREATE DATABASE 数据库名 -- 修改库的选项信息 ALTER DATABASE 库名 选项信息 -- 删除库 DROP DATABASE[ IF EXISTS] 数据库名 同时删除该数据库相关的目录及其目录内容 表的操作 -- 创建表 CREATE [TEMPORARY] TABLE[ IF NOT EXISTS] [库名.</description>
+    </item>
+    
+  </channel>
+</rss>
